@@ -1,0 +1,191 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-image: url("/images/water_boy.jpg");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+}
+
+.green{
+    width: 100%;
+    height: 100%;
+    background-color: #0080003f;
+    overflow: hidden;
+}
+
+/* Header Styling */
+header {
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 30px;
+    /* background-color: #2C3E50; */
+    color: white;
+
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px;
+    margin-left: 40px;
+}
+
+.logo h1 {
+    font-size: 24px;
+    color: #F39C12;
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 240px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 30px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 12px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #6ec254;
+}
+
+.call-btn {
+    background-color: #008000;
+    color: white;
+    width: 180px;
+    padding: 10px 20px;
+    margin-left: 30px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    display: flex;
+    justify-content: center;
+}
+
+.call-btn:hover {
+    background-color: #008000;
+}
+
+/* Hero Section Styling */
+.hero {
+    background: url('bricks-background.jpg') no-repeat center center/cover;
+    height: 100vh;
+    color: white;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    /* text-align: center; */
+    padding: 0 20px;
+    margin-left: 50px;
+    position: relative;
+}
+
+.hero-content h2 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.hero-content h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 4rem;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.hero-content p {
+    font-size: 1rem;
+    margin-bottom: 50px;
+    max-width: 700px;
+    line-height: 2;
+}
+
+.buttons {
+    display: flex;
+    gap: 25px;
+}
+
+.green-btn, .outline-btn {
+    padding: 12px 80px;
+    font-weight: bold;
+    text-decoration: none;
+
+}
+
+.green-btn {
+    background-color: #008000;
+    color: white;
+}
+
+.green-btn:hover {
+    background-color: #0d5e2e;
+}
+
+.outline-btn {
+    border: 1px solid white;
+    color: white;
+}
+
+.outline-btn:hover {
+    background-color: #008000;
+    border: 1px solid #008000;
+    color: #ffffff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10px;
+    }
+
+    nav ul li {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .buttons {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
