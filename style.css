@@ -9,7 +9,7 @@ body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     background-image: url("/images/water_boy.jpg");
-    background-repeat: no-repeat;
+    background-repeat: repeat-y;
     background-position: top;
     background-size: contain;
 }
@@ -88,6 +88,7 @@ nav ul li a:hover {
     transition: background-color 0.3s;
     display: flex;
     justify-content: center;
+    font-size: 90%;
 }
 
 .call-btn:hover {
@@ -169,14 +170,14 @@ nav ul li a:hover {
 .about-us {
     padding: 50px;
     background-color: #f9f9f9;
-    border: 2px solid black;
-    height: 1000px;
+    height: fit-content;
+    /* border: 2px solid black; */
     display: flex;
     /* flex-direction: column; */
     justify-content: center;
 }
 
-.left{
+.left {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -234,12 +235,12 @@ nav ul li a:hover {
     width: 550px;
     border-radius: 15px;
     /* border: none; */
-    box-shadow:3px 3px 10px #202020a6;
+    box-shadow: 3px 3px 10px #202020a6;
     transition: all 0.5s;
 }
 
 .about-image img:hover {
-    box-shadow:none;
+    box-shadow: none;
     transform: scale(1.06);
 }
 
@@ -288,6 +289,275 @@ nav ul li a:hover {
 }
 
 
+/* Stats Section */
+.stats-section {
+    display: flex;
+    justify-content: center;
+    background-color: rgba(53, 58, 102, 0.658);
+    padding: 40px 0;
+    /* background: url('/images/water_boy.jpg') no-repeat center center/cover; */
+}
+
+.statCont {
+    width: fit-content;
+    display: flex;
+    gap: 200px;
+    padding-right: 50px;
+}
+
+.stat {
+    flex: 1;
+    text-align: center;
+    padding: 0 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.stat h2 {
+    font-size: 2.5rem;
+    color: white;
+}
+
+.stat p {
+    font-size: 1rem;
+    margin-top: 10px;
+    color: white;
+}
+
+.stat-icon img {
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+.txt {
+    text-align: start;
+    margin-left: 12px;
+}
+
+
+.container {
+    background-color: white;
+    height: 800px;
+    font-family: Montserrat, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.brickHeading {
+    display: flex;
+    /* flex-direction: column; */
+    /* justify-content: center; */
+    padding: 60px;
+}
+
+.bricks-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.brick-card {
+    background-color: #212d45;
+    padding: 40px 35px 40px 35px;
+    color: white;
+    width: 28%;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.brickHeading h2 {
+    font-size: 30px;
+}
+
+.brick-card img {
+    width: 100%;
+    height: 4 00px;
+    object-fit: cover;
+}
+
+.brick-card h3 {
+    /* text-align: center; */
+    padding: 15px 0;
+    font-size: 24px;
+}
+
+.green-line {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 5px;
+    background-color: #008000;
+    width: 100%;
+}
+
+.view-team {
+    text-align: left;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    width: 50%;
+}
+
+.view-team a {
+    text-decoration: none;
+    color: #555;
+    font-weight: bold;
+}
+
+.view-team a:hover {
+    color: #333;
+}
+
+.brickleft {
+    /* border: 2px solid black; */
+    width: 50%;
+}
+
+
+.message-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: #1a1a2e; */
+    height: 95vh;
+}
+
+.message-content {
+    flex: 1;
+    color: #ffffff;
+    background-image: url('/images/water_boy.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 95vh;
+}
+
+.blue{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(21, 21, 48, 0.63);
+    padding: 40px 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+}
+
+.message-heading {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.message-text {
+    font-size: 12px;
+    line-height: 1.8;
+    max-width: 500px;
+}
+
+.message-signature {
+    margin-top: 40px;
+    font-style: italic;
+}
+
+.message-image-container {
+    flex: 1;
+    background-color: #9c7931ce;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.message-image {
+    width: 65%;
+    height: auto;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.452);
+    transition: box-shadow 0.4s;
+}
+
+.message-image:hover{
+    box-shadow: none;
+}
+
+
+
+
+/* Team Section */
+
+.Team{
+    height: 800px;
+    background-color: rgba(255, 255, 255, 0.918);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 40px;
+}
+
+
+.team-section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.team-member {
+    text-align: center;
+}
+
+.member-photo {
+    width: 350px;
+    height: 400px;
+    object-fit: cover;
+    object-position: top;
+    box-shadow: 1px 1px 20px;
+}
+
+.member-name {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.project-button {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.project-button button {
+    background-color: #008000;
+    color: white;
+    padding: 15px 40px;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.project-button button:hover {
+    background-color: #218838;
+}
+
+
+
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .stats-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .stat {
+        margin-bottom: 20px;
+    }
+}
+
+
+
 
 
 
@@ -321,5 +591,42 @@ nav ul li a:hover {
     .buttons {
         flex-direction: column;
         gap: 15px;
+    }
+}
+
+
+
+
+
+@media screen and (max-width: 1024px) {
+    .message-section {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .message-content {
+        padding: 20px;
+        text-align: center;
+    }
+
+    .message-image-container {
+        padding: 20px;
+    }
+
+    .message-image {
+        width: 200px;
+    }
+
+
+
+    @media screen and (max-width: 768px) {
+        .bricks-container {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .brick-card {
+            width: 80%;
+        }
     }
 }
