@@ -23,11 +23,11 @@ body {
 
 /* Header Styling */
 header {
-    width: 100vw;
+    width: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
-    padding: 10px 30px;
+    padding: 20px 30px;
     margin: auto;
     color: white;
 
@@ -53,14 +53,16 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 20%;
+    gap: 12%;
     margin: auto;
 }
 
 nav ul {
     display: flex;
     list-style: none;
-    min-width: 100px;
+    min-width: 420px;
+    /* border: 2px solid; */
+
 }
 
 nav ul li {
@@ -70,7 +72,7 @@ nav ul li {
 nav ul li a {
     color: white;
     text-decoration: none;
-    font-size: 12px;
+    font-size: 15px;
     transition: color 0.3s;
 }
 
@@ -81,7 +83,7 @@ nav ul li a:hover {
 .call-btn {
     background-color: #008000;
     color: white;
-    width: 180px;
+    min-width: 180px;
     padding: 10px 20px;
     margin-left: 30px;
     text-decoration: none;
@@ -107,6 +109,7 @@ nav ul li a:hover {
     padding: 0 20px;
     margin-left: 50px;
     position: relative;
+    text-shadow: black 1px 1px 1px;
 }
 
 .hero-content h2 {
