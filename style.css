@@ -7,9 +7,8 @@
 
 body {
     font-family: Arial, sans-serif;
-    line-height: 1.6;
     background-image: url("/images/water_boy.jpg");
-    background-repeat: repeat-y;
+    background-repeat: no-repeat    ;
     background-position: top;
     background-size: contain;
 }
@@ -23,7 +22,7 @@ body {
 
 /* Header Styling */
 header {
-    width: 100%;
+    width: 1000px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -39,7 +38,7 @@ header {
 }
 
 .logo img {
-    height: 50px;
+    height: 45px;
     margin-left: 40px;
 }
 
@@ -72,7 +71,7 @@ nav ul li {
 nav ul li a {
     color: white;
     text-decoration: none;
-    font-size: 15px;
+    font-size: 14px;
     transition: color 0.3s;
 }
 
@@ -114,14 +113,14 @@ nav ul li a:hover {
 
 .hero-content h2 {
     font-family: "Montserrat", sans-serif;
-    font-size: 2rem;
+    font-size: 2vw;
     margin-bottom: 10px;
     color: #ffffff;
 }
 
 .hero-content h1 {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 4rem;
+    font-size: 4vw;
     margin-bottom: 20px;
     line-height: 1.2;
 }
@@ -164,6 +163,25 @@ nav ul li a:hover {
     background-color: #008000;
     border: 1px solid #008000;
     color: #ffffff;
+}
+
+
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+
 }
 
 
@@ -298,7 +316,9 @@ nav ul li a:hover {
     justify-content: center;
     background-color: rgba(53, 58, 102, 0.658);
     padding: 40px 0;
-    /* background: url('/images/water_boy.jpg') no-repeat center center/cover; */
+    background: url('/images/water_boy.jpg') no-repeat center center/cover;
+    filter:sepia(0.3);
+    filter:hue-rotate(200deg)
 }
 
 .statCont {
@@ -317,19 +337,24 @@ nav ul li a:hover {
 }
 
 .stat h2 {
-    font-size: 2.5rem;
+    font-size: 3rem;
     color: white;
+    text-shadow: 1px 1px black;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .stat p {
     font-size: 1rem;
-    margin-top: 10px;
+    margin-top: 5px;
     color: white;
+    text-shadow: 1px 1px black;
 }
 
 .stat-icon img {
     height: 50px;
     margin-bottom: 10px;
+    filter:hue-rotate(180deg)
+    
 }
 
 .txt {
@@ -696,38 +721,6 @@ nav ul li a:hover {
 
 
 
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        padding: 20px;
-    }
-
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-        margin-top: 10px;
-    }
-
-    nav ul li {
-        margin-left: 0;
-        margin-bottom: 10px;
-    }
-
-    .hero-content h1 {
-        font-size: 2.5rem;
-    }
-
-    .hero-content p {
-        font-size: 1rem;
-    }
-
-    .buttons {
-        flex-direction: column;
-        gap: 15px;
-    }
-}
 
 
 
