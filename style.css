@@ -7,22 +7,27 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-image: url("/images/water_boy.jpg");
-    background-repeat: no-repeat    ;
-    background-position: top;
-    background-size: contain;
+}
+
+.topGreen {
+    width: 100%;
+    height: 100%;
+    background-color: #00800044;
 }
 
 .green {
     width: 100%;
     height: 100%;
-    background-color: #0080003f;
+    background-image: url("/images/water_boy.jpg");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
     overflow: hidden;
 }
 
 /* Header Styling */
 header {
-    width: 1000px;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -39,7 +44,6 @@ header {
 
 .logo img {
     height: 45px;
-    margin-left: 40px;
 }
 
 .logo h1 {
@@ -84,16 +88,11 @@ nav ul li a:hover {
     color: white;
     min-width: 180px;
     padding: 10px 20px;
-    margin-left: 30px;
     text-decoration: none;
     transition: background-color 0.3s;
     display: flex;
     justify-content: center;
     font-size: 90%;
-}
-
-.call-btn:hover {
-    background-color: #008000;
 }
 
 /* Hero Section Styling */
@@ -113,14 +112,14 @@ nav ul li a:hover {
 
 .hero-content h2 {
     font-family: "Montserrat", sans-serif;
-    font-size: 2vw;
+    font-size: 2rem;
     margin-bottom: 10px;
     color: #ffffff;
 }
 
 .hero-content h1 {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 4vw;
+    font-size: 4rem;
     margin-bottom: 20px;
     line-height: 1.2;
 }
@@ -165,24 +164,125 @@ nav ul li a:hover {
     color: #ffffff;
 }
 
+.hamburger {
+    display: none;
+}
+
+.afterMedia {
+    display: none;
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+}
+
+
+.x {
+    display: none;
+}
 
 
 
 
 /* Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
 
 
-    .hero-content h1 {
+    /* .hero-content h1 {
         font-size: 2.5rem;
     }
 
     .hero-content p {
         font-size: 1rem;
+    } */
+
+    body {
+        background-size: auto;
     }
 
+    .mediaHide {
+        display: none;
+    }
+
+    nav {
+        justify-content: space-between;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .logo img {
+        margin-left: 0;
+    }
+
+    .hero {
+        margin-left: 0;
+        justify-content: center;
+    }
+
+    .hero-content {
+        width: 80%;
+    }
+
+    .buttons {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .btn {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+
+
+.afterMedia {
+    background-color: white;
+}
+
+.afterMedia ul {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    padding: 14px 0;
+    list-style-type: none;
+}
+
+
+.afterMedia ul li a {
+    color: rgb(31, 30, 30);
+    font-size: large;
+    text-decoration: none;
+    padding: 0 80% 0 20px;
+    transition: color 0.5s;
 
 }
+
+.afterMedia ul li a:hover {
+    color: #099409;
+}
+
+.call-btn {
+    width: 10%;
+}
+
+.hero-content h2 {
+    font-size: 1.5rem;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+
+}
+
+.hero-content p {
+    font-size: 90%;
+    max-width: 700px;
+    line-height: 1.5;
+}
+
+
 
 
 
@@ -192,13 +292,13 @@ nav ul li a:hover {
     padding: 50px;
     background-color: #f9f9f9;
     height: fit-content;
-    /* border: 2px solid black; */
     display: flex;
     /* flex-direction: column; */
     justify-content: center;
 }
 
 .left {
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -206,14 +306,14 @@ nav ul li a:hover {
 
 .about-container {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     margin-bottom: 50px;
-    width: 165%;
+    width: 50vw;
+    /* border: 2px solid red; */
 }
 
 .about-text {
-    width: 45%;
+    width: 80%;
     line-height: 1.3;
     margin-left: 30px;
 }
@@ -253,7 +353,7 @@ nav ul li a:hover {
 }
 
 .about-image img {
-    width: 550px;
+    width: 40vw;
     border-radius: 15px;
     /* border: none; */
     box-shadow: 3px 3px 10px #202020a6;
@@ -297,8 +397,6 @@ nav ul li a:hover {
 }
 
 
-
-
 .tickCont {
     display: flex;
     justify-content: center;
@@ -310,22 +408,63 @@ nav ul li a:hover {
 }
 
 
+/* about responsiveness */
+
+@media (max-width: 1000px) {
+
+    .about-us {
+        padding: 25px;
+        flex-direction: column;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .about-container {
+        width: 100%;
+        /* border: 2px solid red; */
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .about-text {
+        width: 100%;
+        line-height: 1.3;
+        margin-left: 0px;
+    }
+
+    .about-image {
+        display: flex;
+        justify-content: center;
+    }
+
+    .about-image img {
+        width: 80vw;
+        border-radius: 15px;
+        /* border: none; */
+        box-shadow: 3px 3px 10px #202020a6;
+        transition: all 0.5s;
+    }
+
+}
+
+
 /* Stats Section */
 .stats-section {
     display: flex;
     justify-content: center;
-    background-color: rgba(53, 58, 102, 0.658);
-    padding: 40px 0;
     background: url('/images/water_boy.jpg') no-repeat center center/cover;
-    filter:sepia(0.3);
-    filter:hue-rotate(200deg)
 }
 
 .statCont {
-    width: fit-content;
+    width: 100vw;
     display: flex;
+    background-color: rgba(65, 71, 121, 0.658);
+    padding: 30px;
+    /* flex-direction: column; */
     gap: 200px;
     padding-right: 50px;
+    transition: gap 0.5s;
 }
 
 .stat {
@@ -353,8 +492,6 @@ nav ul li a:hover {
 .stat-icon img {
     height: 50px;
     margin-bottom: 10px;
-    filter:hue-rotate(180deg)
-    
 }
 
 .txt {
@@ -363,13 +500,34 @@ nav ul li a:hover {
 }
 
 
+/* Responsive Styling */
+@media (max-width: 1000px) {
+    .statCont {
+        gap: 50px;
+    }
+
+    .stat {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 780px) {
+    .statCont {
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+/* Bricks */
 .container {
     background-color: white;
-    height: 800px;
+    height: fit-content;
     font-family: Montserrat, sans-serif;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin-bottom: 80px;
 }
 
 
@@ -383,7 +541,9 @@ nav ul li a:hover {
 .bricks-container {
     display: flex;
     justify-content: center;
+    flex-direction: row;
     gap: 40px;
+    transition: all 1s;
 }
 
 .brick-card {
@@ -398,11 +558,12 @@ nav ul li a:hover {
 
 .brickHeading h2 {
     font-size: 30px;
+    width: 300px;
+    margin-top: 20px;
 }
 
 .brick-card img {
     width: 100%;
-    height: 4 00px;
     object-fit: cover;
 }
 
@@ -445,6 +606,40 @@ nav ul li a:hover {
     /* border: 2px solid black; */
     width: 50%;
 }
+
+
+
+/* Brick Responsiveness */
+
+
+@media screen and (max-width: 768px) {
+    .bricks-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .brick-card {
+        width: 80%;
+        height: 100%;
+        margin: auto;
+    }
+
+
+    .brickHeading {
+        display: block;
+    }
+
+    .view-team {
+        text-align: left;
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+    }
+}
+
+
 
 
 .message-section {
@@ -704,28 +899,6 @@ nav ul li a:hover {
 
 
 
-/* Responsive Styling */
-@media (max-width: 768px) {
-    .stats-section {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .stat {
-        margin-bottom: 20px;
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
 @media screen and (max-width: 1024px) {
     .message-section {
         flex-direction: column;
@@ -746,15 +919,4 @@ nav ul li a:hover {
     }
 
 
-
-    @media screen and (max-width: 768px) {
-        .bricks-container {
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .brick-card {
-            width: 80%;
-        }
-    }
 }
