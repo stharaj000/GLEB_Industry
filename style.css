@@ -582,6 +582,7 @@ nav ul li a:hover {
     width: 100%;
 }
 
+
 .view-team {
     text-align: left;
     margin-top: 20px;
@@ -640,7 +641,7 @@ nav ul li a:hover {
 }
 
 
-
+/* Team Section */
 
 .message-section {
     display: flex;
@@ -696,7 +697,7 @@ nav ul li a:hover {
 }
 
 .message-image {
-    width: 65%;
+    width: 70%;
     height: auto;
     box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.452);
     transition: box-shadow 0.4s;
@@ -706,13 +707,34 @@ nav ul li a:hover {
     box-shadow: none;
 }
 
+@media screen and (max-width: 1024px) {
+    .message-section {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .message-content {
+        padding: 20px;
+        text-align: center;
+    }
+
+    .message-image-container {
+        padding: 20px;
+    }
+
+    .message-image {
+        width: 100%;
+    }
+
+}
+
 
 
 
 /* Team Section */
 
 .Team {
-    height: 800px;
+    height: fit-content;
     background-color: rgba(255, 255, 255, 0.918);
     padding: 30px;
     display: flex;
@@ -762,6 +784,15 @@ nav ul li a:hover {
 
 .project-button button:hover {
     background-color: #218838;
+}
+
+@media (max-width: 1000px) {
+    .team-section {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        gap: 40px;
+    }
 }
 
 
@@ -894,29 +925,3 @@ nav ul li a:hover {
     }
 }
 
-
-
-
-
-
-@media screen and (max-width: 1024px) {
-    .message-section {
-        flex-direction: column;
-        height: auto;
-    }
-
-    .message-content {
-        padding: 20px;
-        text-align: center;
-    }
-
-    .message-image-container {
-        padding: 20px;
-    }
-
-    .message-image {
-        width: 200px;
-    }
-
-
-}
