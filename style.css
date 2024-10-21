@@ -7,6 +7,7 @@
 
 body {
     font-family: Arial, sans-serif;
+    overflow-x: hidden;
 }
 
 .topGreen {
@@ -187,13 +188,12 @@ nav ul li a:hover {
 @media (max-width: 1000px) {
 
 
-    /* .hero-content h1 {
-        font-size: 2.5rem;
+    .green {
+        background-image: url("/images/water_boy.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
     }
-
-    .hero-content p {
-        font-size: 1rem;
-    } */
 
     body {
         background-size: auto;
